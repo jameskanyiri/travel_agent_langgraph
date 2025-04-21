@@ -1,0 +1,9 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+        "travel_agent": "src/graph.py:app"
+    },
+    "python_version": "3.12",
+    "env": "./.env",
+    "dependencies": ["."]
+}
