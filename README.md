@@ -23,6 +23,12 @@ Here’s what you can customize:
 
 ---
 
+## 🌐 Frontend
+
+You can find the frontend repository here: [assistant-frontend](https://github.com/jameskanyiri/assistant_frontend)
+
+---
+
 ##  Getting Started
 
 ###  Clone the Repository
