@@ -1,31 +1,31 @@
-# 🧳 Cross-Border Travel Assistant
+# Cross-Border Travel Assistant
 
 This project uses **LangGraph** to create an AI assistant that helps users understand travel documentation when moving between two countries. The assistant provides guidance on:
 
-1. 🛂 **Visa Requirements**  
-2. 🪪 **Passport Requirements**  
-3. ⚠️ **Travel Advisories**  
-4. 📄 **Additional Documents**
+1.  **Visa Requirements**  
+2.  **Passport Requirements**  
+3.  **Travel Advisories**  
+4.  **Additional Documents**
 
 ---
 
-## 🧩 Configurable Agent Use Case
+##  Configurable Agent Use Case
 
 The assistant is fully configurable — you can change its behavior or use case by modifying the `Configuration` class in the codebase.
 
 Here’s what you can customize:
 
-- 🧠 **Assistant Role** – Redefine its purpose (e.g., from travel assistant to legal, health, or job application helper).
-- 📄 **Output Structure** – Format the assistant’s responses however you'd like.
-- 🔎 **Search Settings** – Control how many search queries/results are used.
-- 🌀 **Reflection Steps** – Tune the number of reasoning iterations.
-- ✅ **Include Search Results** – Enable/disable LLM visibility into search output.
+-  **Assistant Role** – Redefine its purpose (e.g., from travel assistant to legal, health, or job application helper).
+-  **Output Structure** – Format the assistant’s responses however you'd like.
+-  **Search Settings** – Control how many search queries/results are used.
+-  **Reflection Steps** – Tune the number of reasoning iterations.
+-  **Include Search Results** – Enable/disable LLM visibility into search output.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 📦 Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/jameskanyiri/travel_agent_langgraph.git
@@ -46,7 +46,7 @@ brew install astral-sh/uv/uv
 
 ---
 
-### 🛠️ Setup the Environment
+###  Setup the Environment
 
 1. **Create a virtual environment**
 
@@ -76,7 +76,7 @@ uv sync
 
 ---
 
-### 🔐 Environment Variables
+###  Environment Variables
 
 1. Create a `.env` file:
 
@@ -88,7 +88,7 @@ cp .env.example .env
 
 ---
 
-### ▶️ Run the App
+###  Run the App
 
 ```bash
 langgraph dev
@@ -96,7 +96,7 @@ langgraph dev
 
 ---
 
-## 📚 Stack
+##  Stack
 
 - **LangGraph** – for building stateful multi-step LLM applications
 - **uv** – for fast dependency management
@@ -104,7 +104,7 @@ langgraph dev
 
 ---
 
-## 🧠 Assistant Role
+##  Assistant Role
 
 The assistant is designed to:
 
@@ -116,12 +116,12 @@ The assistant is designed to:
 
 ---
 
-## 🙌 Contributing
+##  Contributing
 
 Contributions, issues, and PRs are welcome!
 
 ---
 
-## 📄 License
+##  License
 
 [MIT License](LICENSE)
