@@ -9,6 +9,20 @@ This project uses **LangGraph** to create an AI assistant that helps users under
 
 ---
 
+## 🧩 Configurable Agent Use Case
+
+The assistant is fully configurable — you can change its behavior or use case by modifying the `Configuration` class in the codebase.
+
+Here’s what you can customize:
+
+- 🧠 **Assistant Role** – Redefine its purpose (e.g., from travel assistant to legal, health, or job application helper).
+- 📄 **Output Structure** – Format the assistant’s responses however you'd like.
+- 🔎 **Search Settings** – Control how many search queries/results are used.
+- 🌀 **Reflection Steps** – Tune the number of reasoning iterations.
+- ✅ **Include Search Results** – Enable/disable LLM visibility into search output.
+
+---
+
 ## 🚀 Getting Started
 
 ### 📦 Clone the Repository
