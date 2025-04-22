@@ -14,8 +14,8 @@ This project uses **LangGraph** to create an AI assistant that helps users under
 ### 📦 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/cross-border-travel-assistant.git
-cd cross-border-travel-assistant
+git clone https://github.com/jameskanyiri/travel_agent_langgraph.git
+cd travel_agent_langgraph
 ```
 
 ### ⚡ Install `uv` (if you don't have it)

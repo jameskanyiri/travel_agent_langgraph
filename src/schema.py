@@ -1,16 +1,26 @@
 from pydantic import BaseModel, Field
 
-
 class RouteUserQuery(BaseModel):
     is_satisfactory: bool = Field(
-        description="True if all the user query is clear"
+        description="Indicates whether the user's query is clear and can be processed."
     )
     response_to_user: str = Field(
-        description="If is_satisfactory is true return `Processing your request` else respond with a user query"
+        description=(
+            "Message to return to the user. "
+            "If `is_satisfactory` is True, respond with a generic acknowledgment like 'Processing your request'. "
+            "If False, generate a natural-sounding message. "
+            "If the user's query is likely a question, respond with a clarifying question. "
+            "Otherwise, provide a helpful prompt or suggestion based on the query."
+        )
     )
     search_query: str = Field(
-        description="Query to help find relevant information. Populate this field id is_satisfactory is True else Null"
+        description=(
+            "A refined query used to retrieve relevant information. "
+            "Populate this only if `is_satisfactory` is True; otherwise, set to null."
+        )
     )
+
+
     
 #Define search queries schema
 class SearchQueries(BaseModel):

@@ -5,47 +5,6 @@ from langgraph.graph.message import add_messages, BaseMessage
 
 
 
-TRAVEL_DOCUMENT_SCHEMA = {
-    "title": "TravelDocumentationRequirements",
-    "description": "Details about the travel requirements between an origin and destination country.",
-    "type": "object",
-    "properties": {
-        "origin_country": {
-            "type": "string",
-            "description": "The country the user is traveling from"
-        },
-        "destination_country": {
-            "type": "string",
-            "description": "The country the user is traveling to"
-        },
-        "visa_requirements": {
-            "type": "string",
-            "description": "Detailed visa requirements including type, process, and duration"
-        },
-        "passport_requirements": {
-            "type": "string",
-            "description": "Information about passport validity, blank pages, and expiration policies"
-        },
-        "additional_documents": {
-            "type": "array",
-            "items": {"type": "string"},
-            "description": "Other documents needed such as return ticket, vaccination records, travel insurance, etc."
-        },
-        "travel_advisories": {
-            "type": "string",
-            "description": "Any current travel advisories, restrictions, or health notices related to the destination"
-        }
-    },
-    "required": [
-        "origin_country",
-        "destination_country",
-        "visa_requirements",
-        "passport_requirements",
-        "additional_documents",
-        "travel_advisories"
-    ]
-}
-
 
 
 @dataclass(kw_only=True)
@@ -65,11 +24,6 @@ class AgentState:
 
     user_query: str = field(default=None)
     "query provided by the user."
-
-    extraction_schema: dict[str, Any] = field(
-        default_factory=lambda: TRAVEL_DOCUMENT_SCHEMA
-    )
-    "The json schema defines the information the agent is tasked with filling out."
 
 
     search_queries: list[str] = field(default=None)

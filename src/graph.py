@@ -339,6 +339,7 @@ async def format_response(state: AgentState, config: RunnableConfig)->Command[Li
     
     configuration = Configuration.from_runnable_config(config)
     assistant_role = configuration.assistant_role
+    output_structure = configuration.output_structure
     
     
     user_query = state.user_query
@@ -346,7 +347,8 @@ async def format_response(state: AgentState, config: RunnableConfig)->Command[Li
     system_instruction = FORMAT_RESPONSE_PROMPT.format(
         user_query = user_query,
         assistant_role = assistant_role,
-        relevant_information = extracted_info
+        relevant_information = extracted_info,
+        output_structure = output_structure,
     )
     
     response = await llm.ainvoke([SystemMessage(content=system_instruction)])

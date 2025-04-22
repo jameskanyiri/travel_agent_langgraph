@@ -5,6 +5,30 @@ from typing import Any, Optional
 from langchain_core.runnables import RunnableConfig
 
 
+DEFAULT_ROLE = """
+Help user understand the following documents when traveling between countries:
+
+ 1. Visa Requirements, 
+ 2. Passport Requirements, 
+ 3. Travel Advisories, 
+ 4. Additional Documents.
+"""
+
+DEFAULT_OUTPUT_STRUCTURE = """
+Use this structure to create a report on the user-provided query:
+
+1. Visa Requirements, 
+    - Well formatted points
+2. Passport Requirements, 
+    - Well formatted points
+3. Travel Advisories, 
+    - Well formatted points
+4. Additional Documents.
+    - Well formatted points
+ 
+"""
+
+
 @dataclass(kw_only=True)
 class Configuration:
     """The configurable fields for the assistant."""
@@ -13,13 +37,9 @@ class Configuration:
 
     assistant_name: str = "GlobeGuide"
 
-    assistant_role = (
-        "Help user understand the following documents when traveling between two countries"
-        "1. Visa Requirements"
-        "2. Passport Requirements"
-        "3. Travel Advisories"
-        "4. Additional Documents"
-    )
+    assistant_role: str = DEFAULT_ROLE
+    
+    output_structure: str = DEFAULT_OUTPUT_STRUCTURE
 
     # Max search queries per user query
     max_search_queries: int = 1
